@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Algorithm,AI," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="The post correspondence problem was first introduced by Emil Post in 1946. It was defined as follows: Suppose you have an infinite number of different kinds of dominoes. There are two non-empty alphab">
+<meta name="keywords" content="Algorithm,AI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Something About Post Correspondence Problem">
+<meta property="og:url" content="https://lewang2333.github.io/2018/02/27/Something-About-Post-Correspondence-Problem/index.html">
+<meta property="og:site_name" content="Le Wang&#39; Blog">
+<meta property="og:description" content="The post correspondence problem was first introduced by Emil Post in 1946. It was defined as follows: Suppose you have an infinite number of different kinds of dominoes. There are two non-empty alphab">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-02-28T01:53:13.071Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Something About Post Correspondence Problem">
+<meta name="twitter:description" content="The post correspondence problem was first introduced by Emil Post in 1946. It was defined as follows: Suppose you have an infinite number of different kinds of dominoes. There are two non-empty alphab">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"remove","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lewang2333.github.io/2018/02/27/Something-About-Post-Correspondence-Problem/"/>
+
+
+
+
+
+  <title>Something About Post Correspondence Problem | Le Wang' Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Le Wang' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewang2333.github.io/2018/02/27/Something-About-Post-Correspondence-Problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Le Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Le Wang' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Something About Post Correspondence Problem</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-27T19:42:50-05:00">
+                2018-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Artificial-Intelligence/" itemprop="url" rel="index">
+                    <span itemprop="name">Artificial Intelligence</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>The post correspondence problem was first introduced by Emil Post in 1946. It was defined as follows: Suppose you have an infinite number of different kinds of dominoes. There are two non-empty alphabet strings on the two sides (top and bottom) of each domino. What you need to do is to place dominoes side by side so that the combination of strings on each side are same.<br><a id="more"></a></p>
+<p>There’s an example:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Dominoes</th>
+<th style="text-align:center">Top</th>
+<th style="text-align:center">Bottom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">a</td>
+<td style="text-align:center">baa</td>
+</tr>
+<tr>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">aa</td>
+</tr>
+<tr>
+<td style="text-align:center">D3</td>
+<td style="text-align:center">bba</td>
+<td style="text-align:center">bb</td>
+</tr>
+</tbody>
+</table>
+<p>One solution would be (D3, D2, D3, D1), which makes the combination of the top and the bottom side of this set of dominoes are both “bbaabbbaa”.</p>
+<p>Obviously, there is no efficient algorithm to solve the post correspondence problem. We can only find a proper answer by exhaustive search. However, there is still no break point for us to show where we can terminate the search process.</p>
+<p>Also, DFS doesn’t work well on this problem because of the reason above. One algorithm we can apply is BFS, but how can we store the states?</p>
+<p>The most common thought is to store the combinations on the top and bottom as follow:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueueElement</span><span class="params">(object)</span>:</span></span><br><span class="line">    top = <span class="string">""</span></span><br><span class="line">    bottom = <span class="string">""</span></span><br></pre></td></tr></table></figure>
+<p>But can you imagine how big a queue we need to store the state space, even in the easiest example above?</p>
+<p>A better way to define a state is to be either the part of the bottom that goes past the top or vice versa. Since we only need to find one solution, the combinations “abba/abbaab” and “ac/acab” can be consider the same because what we need is a “ab” on bottom, and any sequence that can be added after “abba/abbaab” can also be added after “ac/acab”.</p>
+<p>In this way, the state space becomes extremely smaller than before, which makes a great progress to search more sequences. However, the better state space cannot help us solve this problem perfectly. We need to combine BFS with iterative deepening to get closer to an answer.</p>
+<p>Thus, to try my best to find an answer to the post correspondence problem, the program should be divided into two stages:</p>
+<ol>
+<li>Use BFS to generate as many as possible states within the limit of memory.</li>
+<li>Use iterative deepening starting from the frontier created in the first stage.</li>
+</ol>
+<p><strong>Reference</strong></p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Post_correspondence_problem" target="_blank" rel="noopener">Post correspondence problem - Wikipedia</a></li>
+<li><a href="https://cs.nyu.edu/courses/spring18/CSCI-GA.2560-001/" target="_blank" rel="noopener">Artificial Intelligence Home Page - NYU</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/01/LeetCode-Solutions/" rel="next" title="LeetCode Solutions">
+                <i class="fa fa-chevron-left"></i> LeetCode Solutions
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/01/Propositional-Model-Checking/" rel="prev" title="Propositional Model Checking">
+                Propositional Model Checking <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Le Wang</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
