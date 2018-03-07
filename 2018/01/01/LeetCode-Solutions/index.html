@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Le Wang&#39; Blog">
 <meta property="og:description" content="This is a report for my LeetCode solutions (zh-CN). I will always keep updating when I solve new problems.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-07T06:20:12.207Z">
+<meta property="og:updated_time" content="2018-03-07T09:35:32.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode Solutions">
 <meta name="twitter:description" content="This is a report for my LeetCode solutions (zh-CN). I will always keep updating when I solve new problems.">
@@ -373,7 +373,7 @@
 <tbody>
 <tr>
 <td style="text-align:center">Data Structure</td>
-<td style="text-align:center">307, 380, 636, 729, 731, 732, 739</td>
+<td style="text-align:center">307, 380, 636, 692, 729, 731, 732, 739</td>
 </tr>
 <tr>
 <td style="text-align:center">Binary Search</td>
@@ -385,7 +385,7 @@
 </tr>
 <tr>
 <td style="text-align:center">Search</td>
-<td style="text-align:center">77, 200, 526, 689</td>
+<td style="text-align:center">17, 77, 200, 526, 689</td>
 </tr>
 <tr>
 <td style="text-align:center">Simulation</td>
@@ -409,6 +409,7 @@
 </tr>
 </tbody>
 </table>
+<h2 id="17-Letter-Combinations-of-a-Phone-Number"><a href="#17-Letter-Combinations-of-a-Phone-Number" class="headerlink" title="17. Letter Combinations of a Phone Number"></a>17. Letter Combinations of a Phone Number</h2><p>为什么这么水，一个回溯。</p>
 <h2 id="35-Search-Insert-Position"><a href="#35-Search-Insert-Position" class="headerlink" title="35. Search Insert Position"></a>35. Search Insert Position</h2><p>最基本的二分查找，对于我自己的方法来说(左闭右闭区间)，如果找不到，那么目标应该出现的位置就是最后更新的left的位置。</p>
 <h2 id="49-Group-Anagrams"><a href="#49-Group-Anagrams" class="headerlink" title="49. Group Anagrams"></a>49. Group Anagrams</h2><p>非常邪道的一个题，最先写的union-find，但是两两判断父子关系时间复杂度就是O(n^2)了，最后用了终极邪道方法之利用Python dictionary增删查改都是O(1)的特性。</p>
 <h2 id="77-Combinations"><a href="#77-Combinations" class="headerlink" title="77. Combinations"></a>77. Combinations</h2><p>一个枚举，但是引出了一个非常重要的知识点：对一个listA进行切片操作之后，原来的listA并没有改变，而是相当于new了一个新的值等于listA切片过后值的ListB，然后把原来指向ListA的索引指向了ListB，看代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">print</span> id(a)</span><br><span class="line">a.pop()</span><br><span class="line"><span class="keyword">print</span> id(a)</span><br><span class="line"><span class="comment"># 两次输出结果相同</span></span><br><span class="line"></span><br><span class="line">b = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br><span class="line"><span class="keyword">print</span> id(b)</span><br><span class="line">b = b[:len(b)<span class="number">-1</span>]</span><br><span class="line"><span class="keyword">print</span> id(b)</span><br><span class="line"><span class="comment"># 两次输出结果不同</span></span><br></pre></td></tr></table></figure></p>
@@ -447,6 +448,7 @@
 <h2 id="638-Shopping-Offers"><a href="#638-Shopping-Offers" class="headerlink" title="638. Shopping Offers"></a>638. Shopping Offers</h2><p>记忆化DP，Python真是牛逼，把str之后的list做字典索引。</p>
 <h2 id="657-Judge-Route-Circle"><a href="#657-Judge-Route-Circle" class="headerlink" title="657. Judge Route Circle"></a>657. Judge Route Circle</h2><p>又烂又水的一个模拟，不知道为什么会被打上Google的标签。</p>
 <h2 id="667-Beautiful-Arrangement-II"><a href="#667-Beautiful-Arrangement-II" class="headerlink" title="667. Beautiful Arrangement II"></a>667. Beautiful Arrangement II</h2><p>和本题的前作Beautiful Arrangement I完全不一样，是一个找规律的题，或者是一个数学题吧。</p>
+<h2 id="692-Top-K-Frequent-Words"><a href="#692-Top-K-Frequent-Words" class="headerlink" title="692. Top K Frequent Words"></a>692. Top K Frequent Words</h2><p>优先队列，Python有现成的小根堆库哟。</p>
 <h2 id="698-Partition-to-K-Equal-Sum-Subsets"><a href="#698-Partition-to-K-Equal-Sum-Subsets" class="headerlink" title="698. Partition to K Equal Sum Subsets"></a>698. Partition to K Equal Sum Subsets</h2><p>一个DFS，对时间卡得比较死，有几个剪枝点：</p>
 <ol>
 <li>如果所有数字的和不能被k整除，直接退出</li>
