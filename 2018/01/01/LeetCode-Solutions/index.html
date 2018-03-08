@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Le Wang&#39; Blog">
 <meta property="og:description" content="This is a report for my LeetCode solutions (zh-CN). I will always keep updating when I solve new problems.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-07T09:35:32.671Z">
+<meta property="og:updated_time" content="2018-03-08T05:57:46.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode Solutions">
 <meta name="twitter:description" content="This is a report for my LeetCode solutions (zh-CN). I will always keep updating when I solve new problems.">
@@ -373,7 +373,7 @@
 <tbody>
 <tr>
 <td style="text-align:center">Data Structure</td>
-<td style="text-align:center">307, 380, 636, 692, 729, 731, 732, 739</td>
+<td style="text-align:center">23, 307, 380, 636, 692, 729, 731, 732, 739</td>
 </tr>
 <tr>
 <td style="text-align:center">Binary Search</td>
@@ -381,15 +381,15 @@
 </tr>
 <tr>
 <td style="text-align:center">Tree Traversal</td>
-<td style="text-align:center">199</td>
+<td style="text-align:center">199, 230</td>
 </tr>
 <tr>
 <td style="text-align:center">Search</td>
-<td style="text-align:center">17, 77, 200, 526, 689</td>
+<td style="text-align:center">17, 22, 77, 200, 207, 526, 689</td>
 </tr>
 <tr>
 <td style="text-align:center">Simulation</td>
-<td style="text-align:center">49, 288, 389, 406, 448, 485, 521, 522, 535, 594, 599, 657, 729</td>
+<td style="text-align:center">19, 49, 288, 389, 406, 448, 485, 521, 522, 535, 594, 599, 648, 657, 729</td>
 </tr>
 <tr>
 <td style="text-align:center">Sort &amp; Select</td>
@@ -410,6 +410,9 @@
 </tbody>
 </table>
 <h2 id="17-Letter-Combinations-of-a-Phone-Number"><a href="#17-Letter-Combinations-of-a-Phone-Number" class="headerlink" title="17. Letter Combinations of a Phone Number"></a>17. Letter Combinations of a Phone Number</h2><p>为什么这么水，一个回溯。</p>
+<h2 id="19-Remove-Nth-Node-From-End-of-List"><a href="#19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="19. Remove Nth Node From End of List"></a>19. Remove Nth Node From End of List</h2><p>用快慢指针来找倒数第n个node，记得要自己添加一个head哟，不然如果删除第一个元素会有问题</p>
+<h2 id="22-Generate-Parentheses"><a href="#22-Generate-Parentheses" class="headerlink" title="22. Generate Parentheses"></a>22. Generate Parentheses</h2><p>回溯水题</p>
+<h2 id="23-Merge-k-Sorted-Lists"><a href="#23-Merge-k-Sorted-Lists" class="headerlink" title="23. Merge k Sorted Lists"></a>23. Merge k Sorted Lists</h2><p>经典题了，算法课期中考试考试题。</p>
 <h2 id="35-Search-Insert-Position"><a href="#35-Search-Insert-Position" class="headerlink" title="35. Search Insert Position"></a>35. Search Insert Position</h2><p>最基本的二分查找，对于我自己的方法来说(左闭右闭区间)，如果找不到，那么目标应该出现的位置就是最后更新的left的位置。</p>
 <h2 id="49-Group-Anagrams"><a href="#49-Group-Anagrams" class="headerlink" title="49. Group Anagrams"></a>49. Group Anagrams</h2><p>非常邪道的一个题，最先写的union-find，但是两两判断父子关系时间复杂度就是O(n^2)了，最后用了终极邪道方法之利用Python dictionary增删查改都是O(1)的特性。</p>
 <h2 id="77-Combinations"><a href="#77-Combinations" class="headerlink" title="77. Combinations"></a>77. Combinations</h2><p>一个枚举，但是引出了一个非常重要的知识点：对一个listA进行切片操作之后，原来的listA并没有改变，而是相当于new了一个新的值等于listA切片过后值的ListB，然后把原来指向ListA的索引指向了ListB，看代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">print</span> id(a)</span><br><span class="line">a.pop()</span><br><span class="line"><span class="keyword">print</span> id(a)</span><br><span class="line"><span class="comment"># 两次输出结果相同</span></span><br><span class="line"></span><br><span class="line">b = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br><span class="line"><span class="keyword">print</span> id(b)</span><br><span class="line">b = b[:len(b)<span class="number">-1</span>]</span><br><span class="line"><span class="keyword">print</span> id(b)</span><br><span class="line"><span class="comment"># 两次输出结果不同</span></span><br></pre></td></tr></table></figure></p>
@@ -418,9 +421,11 @@
 <h2 id="140-Word-Break-II"><a href="#140-Word-Break-II" class="headerlink" title="140. Word Break II"></a>140. Word Break II</h2><p>本系列的第二题，记忆化还要输出过程，有点伤脑筋呢，看代码吧。</p>
 <h2 id="199-Binary-Tree-Right-Side-View"><a href="#199-Binary-Tree-Right-Side-View" class="headerlink" title="199. Binary Tree Right Side View"></a>199. Binary Tree Right Side View</h2><p>做一次pre-order遍历，对于每一层，不断记录新发现的节点。其实也可以按照root-right-left的顺序遍历，只记录每一层第一次发现的节点。两种解法差不多，我用的第一种。</p>
 <h2 id="200-Number-of-Islands"><a href="#200-Number-of-Islands" class="headerlink" title="200. Number of Islands"></a>200. Number of Islands</h2><p>就是一个种子染色，和高中做的数细胞一模一样。注意Python初始化一个二维数组用的方法是:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashMap = [[<span class="number">0</span> <span class="keyword">for</span> j <span class="keyword">in</span> range(m)] <span class="keyword">for</span> i <span class="keyword">in</span> range(n)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="207-Course-Schedule"><a href="#207-Course-Schedule" class="headerlink" title="207. Course Schedule"></a>207. Course Schedule</h2><p>判断有向图有没有环，我用的dfs判断颜色方法。</p>
 <h2 id="215-Kth-Largest-Element-in-an-Array"><a href="#215-Kth-Largest-Element-in-an-Array" class="headerlink" title="215. Kth Largest Element in an Array"></a>215. Kth Largest Element in an Array</h2><p>第k极值，Quick Select练习</p>
 <h2 id="228-Summary-Ranges"><a href="#228-Summary-Ranges" class="headerlink" title="228. Summary Ranges"></a>228. Summary Ranges</h2><p>一个很简单的模拟，但是自己给自己挖了一个坑。判断一个变量为不为None的时候，要用is None来判断，不能简单用not来判断，例子：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="keyword">None</span></span><br><span class="line"><span class="keyword">not</span> x</span><br><span class="line">x <span class="keyword">is</span> <span class="keyword">None</span></span><br><span class="line"><span class="comment"># 返回值是 True, True</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">0</span></span><br><span class="line"><span class="keyword">not</span> x</span><br><span class="line">x <span class="keyword">is</span> <span class="keyword">None</span></span><br><span class="line"><span class="comment"># 返回值是 True, False</span></span><br></pre></td></tr></table></figure>
+<h2 id="230-Kth-Smallest-Element-in-a-BST"><a href="#230-Kth-Smallest-Element-in-a-BST" class="headerlink" title="230. Kth Smallest Element in a BST"></a>230. Kth Smallest Element in a BST</h2><p>用一个In-order traversal来找BST中的第k小值。</p>
 <h2 id="307-Range-Sum-Query-Mutable"><a href="#307-Range-Sum-Query-Mutable" class="headerlink" title="307. Range Sum Query - Mutable"></a>307. Range Sum Query - Mutable</h2><p>最简单的线段树(Segment Tree)，我写了很标准的线段树代码，可以作为模板，具体参见源代码。</p>
 <h2 id="380-Insert-Delete-GetRandom-O-1"><a href="#380-Insert-Delete-GetRandom-O-1" class="headerlink" title="380. Insert Delete GetRandom O(1)"></a>380. Insert Delete GetRandom O(1)</h2><p>大意就是设计一种数据结构，让插入，删除和随机取数的时间复杂度都是常数。可以一看，用了Python里面list的append和pop，还有dictionary的查找增加删除都是常数时间复杂度的特性。</p>
 <h2 id="389-Find-the-Difference"><a href="#389-Find-the-Difference" class="headerlink" title="389. Find the Difference"></a>389. Find the Difference</h2><p>水题，也太水了吧……</p>
@@ -446,6 +451,7 @@
 <h2 id="599-Minimum-Index-Sum-of-Two-Lists"><a href="#599-Minimum-Index-Sum-of-Two-Lists" class="headerlink" title="599. Minimum Index Sum of Two Lists"></a>599. Minimum Index Sum of Two Lists</h2><p>模拟水题，不说了。</p>
 <h2 id="636-Exclusive-Time-of-Functions"><a href="#636-Exclusive-Time-of-Functions" class="headerlink" title="636. Exclusive Time of Functions"></a>636. Exclusive Time of Functions</h2><p>类似于用栈匹配括号，一次过，有点像我面FB的题目。</p>
 <h2 id="638-Shopping-Offers"><a href="#638-Shopping-Offers" class="headerlink" title="638. Shopping Offers"></a>638. Shopping Offers</h2><p>记忆化DP，Python真是牛逼，把str之后的list做字典索引。</p>
+<h2 id="648-Replace-Words"><a href="#648-Replace-Words" class="headerlink" title="648. Replace Words"></a>648. Replace Words</h2><p>拿到以为是什么高深的题目，就先写了一个O(N^2)的试试，结果过了。这么水的吗。</p>
 <h2 id="657-Judge-Route-Circle"><a href="#657-Judge-Route-Circle" class="headerlink" title="657. Judge Route Circle"></a>657. Judge Route Circle</h2><p>又烂又水的一个模拟，不知道为什么会被打上Google的标签。</p>
 <h2 id="667-Beautiful-Arrangement-II"><a href="#667-Beautiful-Arrangement-II" class="headerlink" title="667. Beautiful Arrangement II"></a>667. Beautiful Arrangement II</h2><p>和本题的前作Beautiful Arrangement I完全不一样，是一个找规律的题，或者是一个数学题吧。</p>
 <h2 id="692-Top-K-Frequent-Words"><a href="#692-Top-K-Frequent-Words" class="headerlink" title="692. Top K Frequent Words"></a>692. Top K Frequent Words</h2><p>优先队列，Python有现成的小根堆库哟。</p>
